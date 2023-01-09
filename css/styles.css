@@ -44,6 +44,19 @@ a {
  text-decoration: none;
 }
 
+.visually-hidden {
+ position: absolute;
+ white-space: nowrap;
+ width: 1px;
+ height: 1px;
+ overflow: hidden;
+ border: 0;
+ padding: 0;
+ clip: rect(0 0 0 0);
+ clip-path: inset(50%);
+ margin: -1px;
+}
+
 .container {
  width: 1128px;
  /* padding-left: 15px;
@@ -686,4 +699,31 @@ a {
  resize: none;
  outline: none;
  padding: 8px 16px;
+}
+
+.modal-check-text {
+ font-size: 12px;
+ line-height: calc(16 / 12);
+ letter-spacing: 0.04em;
+ color: #757575;
+ display: flex;
+ align-items: center;
+}
+
+.modal-check-text span {
+ width: 16px;
+ height: 16px;
+ border: 1.25px solid #2e2f42;
+ border-radius: 2px;
+ margin-right: 8px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ fill: transparent;
+}
+
+.modal-check:checked + .modal-check-text span {
+ background-color: #404bbf;
+ border: none;
+ fill: #f4f4fd;
 }
